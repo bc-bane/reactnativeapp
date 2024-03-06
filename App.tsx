@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react';
-import { StyleSheet, Text, View, Pressable, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 import 'react-native-get-random-values';
 import { v4 as uuid } from "uuid";
 import { AddInput } from './component/AddInput';
@@ -24,6 +25,15 @@ const initialData = [
 ];
 
 export default function App() {
+  return(
+    <SafeAreaProvider>
+      <MainComponent />
+    </SafeAreaProvider>
+  )
+}
+
+function MainComponent() {
+  const insets = useSafeAreaInsets();
   const [todos, setTodos] = useState(initialData);
 
     const addTodo = useCallback((label: string) => {
@@ -42,17 +52,17 @@ export default function App() {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Todo List Interview</Text>
-      <AddInput onAdd={addTodo} />
-      <View style={styles.listContainer}>
-        <FlatList
-          data={todos}
-          renderItem={({ item }) => <TodoItem {...item} onPress={onPressItem} />}
-          keyExtractor={item => item.id}
-        />
+      <View style={[{ paddingTop: insets.top }, styles.container]}>
+        <Text style={styles.title}>Todo List Interview</Text>
+        <AddInput onAdd={addTodo} />
+        <View style={styles.listContainer}>
+          <FlatList
+            data={todos}
+            renderItem={({ item }) => <TodoItem {...item} onPress={onPressItem} />}
+            keyExtractor={item => item.id}
+          />
+        </View>
       </View>
-    </View>
   );
 }
 
@@ -61,10 +71,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
   title: {
     fontSize: 25,
+    marginBottom: 20,
   },
   listContainer: {
     height: 400,

@@ -13,16 +13,18 @@ export const AddInput: FC<AddInputProps> = ({ onAdd }) => {
       <TextInput
         onChangeText={setInput}
         placeholder="Add a new todo item here"
-        placeholderTextColor="#000"
+        placeholderTextColor="lightgray"
         value={input}
         style={styles.textInput}
       />
       <Button
-        title='Submit'
+        title='Add Todo Item'
         onPress={
           () => {
-            onAdd(input);
-            setInput('')
+            if (input !== "") {              
+              onAdd(input);
+              setInput('')
+            }
           }
         }
       />
@@ -41,7 +43,8 @@ const styles = StyleSheet.create({
   textInput: {
     borderWidth: 1,
     borderColor: 'lightgray',
-    borderRadius: 2,
-    width: 300
+    borderRadius: 5,
+    width: 300,
+    padding: 5,
   }
 });

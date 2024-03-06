@@ -17,8 +17,12 @@ export const TodoItem: FC<TodoItemProps> = ({
 }) => {
   return (
     <View style={styles.container} key={id}>
-      {isChecked ? <Text>☑</Text>: <Text>☐</Text>}
-      <Text>{label}</Text>
+      {
+        isChecked ? 
+          <Text style={styles.checkboxChecked}>☑</Text> : 
+          <Text style={styles.checkboxUnchecked}>☐</Text>
+      }
+      <Text style={styles.label}>{label}</Text>
     </View>
   );
 };
@@ -27,6 +31,15 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 5,
+    marginTop: 20,
   },
+  checkboxUnchecked: {
+    fontSize: 20,
+  },
+  checkboxChecked: {
+    fontSize: 16,
+  },
+  label: {
+    paddingLeft: 8,
+  }
 });
