@@ -18,7 +18,7 @@ const initialData = [
   },
   {
     id: uuid(),
-    label: "Ace CoderPad interview",
+    label: "Ace the interview",
     isChecked: true,
   },
 ];
