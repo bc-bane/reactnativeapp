@@ -37,7 +37,7 @@ export default function App() {
     ]);
   }, []);
 
-  const handleChange = useCallback((isChecked: boolean) => {
+  const onPressItem = useCallback(() => {
     // handle the check/uncheck logic
   }, []);
 
@@ -48,7 +48,7 @@ export default function App() {
       <View style={styles.listContainer}>
         <FlatList
           data={todos}
-          renderItem={({ item }) => <TodoItem {...item} onChange={handleChange} />}
+          renderItem={({ item }) => <TodoItem {...item} onPress={onPressItem} />}
           keyExtractor={item => item.id}
         />
       </View>
