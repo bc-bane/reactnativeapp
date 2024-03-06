@@ -16,3 +16,5 @@ The goal of this exercise is to create a working todo list, there is currently n
 3. Add createdAt timestamps to the items when they are made and display them on the Todo items, display 'N/A' if no timestamp available.
 4. Update the app to sort the items with newest items at the bottom.
 
+You do not need to worry about styling the app and you ARE allowed to use google or other resources to look things up, just make sure you share your screen for that and talk through the process. This is not a PASS/FAIL coding challenge, and you don't automatically fail if you miss something or one of the points, we are reviewing your thought process and the way you create a solution as much are we are reviewing how much you finish.
+
