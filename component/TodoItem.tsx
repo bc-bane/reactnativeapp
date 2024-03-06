@@ -5,14 +5,14 @@ export interface TodoItemProps {
   id: string;
   label: string;
   isChecked?: boolean;
-  onChange?: (isChecked: boolean) => void;
+  onPress?: () => void;
 }
 
 export const TodoItem: FC<TodoItemProps> = ({
   id,
   label,
   isChecked = false,
-  onChange,
+  onPress,
 }) => {
   return (
     <View style={styles.container} key={id}>
