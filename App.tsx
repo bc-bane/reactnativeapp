@@ -9,17 +9,17 @@ const initialData = [
   {
     id: uuid(),
     label: "Buy groceries",
-    checked: false,
+    isChecked: false,
   },
   {
     id: uuid(),
     label: "Reboot computer",
-    checked: false,
+    isChecked: false,
   },
   {
     id: uuid(),
     label: "Ace CoderPad interview",
-    checked: true,
+    isChecked: true,
   },
 ];
 
@@ -31,7 +31,7 @@ export default function App() {
       {
         id: uuid(),
         label,
-        checked: false,
+        isChecked: false,
       },
       ...prev,
     ]);
