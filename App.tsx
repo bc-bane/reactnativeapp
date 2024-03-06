@@ -36,7 +36,7 @@ function MainComponent() {
   const insets = useSafeAreaInsets();
   const [todos, setTodos] = useState(initialData);
 
-    const addTodo = useCallback((label: string) => {
+  const addTodo = useCallback((label: string) => {
     setTodos((prev) => [
       {
         id: uuid(),
