@@ -5,7 +5,7 @@ To run your project, navigate to the directory and run one of the following npm 
 
 Using the terminal you can now select between starting an iOS or Android simulator
 
-## React Todo List
+## React Native Todo List
 
 The goal of this exercise is to create a working todo list, there is currently no working mechanism for completing or deleting todo items
 
