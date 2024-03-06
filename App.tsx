@@ -37,7 +37,7 @@ export default function App() {
     ]);
   }, []);
 
-  const handleChange = useCallback((checked: boolean) => {
+  const handleChange = useCallback((isChecked: boolean) => {
     // handle the check/uncheck logic
   }, []);
 
