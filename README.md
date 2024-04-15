@@ -18,6 +18,6 @@ The goal of this exercise is to create a working todo list, there is currently n
 
 1. Clicking on a todo item should toggle the "checked" state.
 2. Implement deletion of the todo items.
-3. Add createdAt timestamps to the items when they are added, and display them in the TodoItem. Update the initialData to include timestamps and assign valid values to each item. MomentJS is installed for formatting the dates on the TodoItem.
+3. Add createdAt timestamps to the items when they are added, and display them in the TodoItem. Update the initialData to include timestamps and assign valid values to each item.
 4. Update the app to sort the items with newest items at the bottom.
 
